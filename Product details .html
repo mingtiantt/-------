@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>图书详情</title>
+    <!-- AWESOME图标 -->
+    <script src="https://kit.fontawesome.com/13397b7837.js" crossorigin="anonymous"></script>
+    <!-- 网页标签图标 -->
+    <link rel="icon" href="img/icon/icon.jfif" />
+    <!-- bootstrap引用 -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/bootstrap.bundle.js"></script>
+   <script src="vendor/bootstrap/css/bootstrap.min.css"></script>
+    <!-- style部分 -->
+    <link rel="stylesheet" href="index.css" />
+  
+    <header>
+      <!-- nav -->
+      <div class="nav  ">
+      <nav class="navbar navbar-expand-lg  navbar-dark fixed-top ">
+        <a class="navbar-brand" href="#">
+          <img src="img/icon/icon.jfif" class="ms-4" alt="">
+        </a>
+        <button class="navbar-toggler bg-dark me-4 type="button  data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-dark "  href="index.html">首页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark " href="Shopping center.html">图书商城</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Product details .html">图书详情</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">新品区</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">关于我们</a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+              <a class="nav-link text-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                用户</a>    
+           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+           <li><a class="dropdown-item" href="#">登录</a></li>
+            <li><a class="dropdown-item" href="#">注册</a></li>
+          <li><a class="dropdown-item" href="#">关于我们</a></li>
+          </ul>
+            </div>
+            </li>
+            </ul>
+            <div class="search-box  col-lg-4 col-md-3 ">
+              <input type="text" class="form-control" placeholder="庆余年2">
+            
+              <div class="btn">
+              <button class="btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            </div> 
+            <div class="buycart  col-lg-2 col-md-6 ms-4">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span><a href="">我的购物车</a></span>
+            </div> 
+            </div> 
+          </div>  
+      </header>
+     
+      <div class="box-product-details" id="box-product-details">
+        <div class="daohang col-lg-2">
+          <a href="index.html">首页</a>>
+          <a href="">呼兰河传</a>
+          </div>
+      <div class="container my-5">
+        <div class="row">
+         
+            <!-- Left Side: Images -->
+            <div class="box-picture col-md-6 col-lg-6">
+                <div class="product-thumbnail text-center mb-4">
+                    <img id="main-image" src="img/card/1.jpg" alt="Product Image">
+                </div>
+                <hr>
+                <div class="thumbnails">
+                    <div class="thumbnail">
+                        <img src="img/card/1.jpg" alt="Thumbnail 1" onclick="changeImage('img/card/1.jpg')" class="selected">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="img/card/2.jpg" alt="Thumbnail 2" onclick="changeImage('img/card/2.jpg')">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="img/card/3.jpg" alt="Thumbnail 3" onclick="changeImage('img/card/3.jpg')">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="img/card/4.jpg" alt="Thumbnail 4" onclick="changeImage('img/card/4.jpg')">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="img/card/5.jpg" alt="Thumbnail 5" onclick="changeImage('img/card/5.jpg')">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="img/card/6.jpg" alt="Thumbnail 6" onclick="changeImage('img/card/6.jpg')">
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <!-- Right Side: Information -->
+            <div class="col-md-6">
+                <h2>呼兰河传</h2>
+                <p class="price">¥99</p>
+                <p class="old-price">¥109</p>
+
+                <div class="mb-3">
+                    <div class="offer-badge bg-primary text-white p-1">买二送一</div>
+                    <div class="offer-badge bg-primary text-white p-1">保价618</div>
+                    <div class="offer-badge bg-primary text-white p-1">官方正品</div>
+                </div>
+
+                <div class="mb-3">
+                    <h5>简介</h5>
+                    <p>《呼兰河传》以萧红童年生活为线索，反映出呼兰这座小城当年的社会风貌、人情百态。</p>
+                </div>
+
+                <div class="mb-3">
+                    <h5>选择系列</h5>
+                    <button type="button" class="btn btn-outline-primary mb-2 w-100"><img src="./img/smallcard/1.jpg" alt=""> 呼兰河传经典版</button>
+                    <button type="button" class="btn btn-outline-primary w-100"><img src="./img/smallcard/2.png" alt=""> 呼兰河传经典版+图书集</button>
+                </div>
+
+                <div class="mb-3">
+                    <h5>配送至</h5>
+                    <button type="button" class="btn btn-outline-primary mb-2 w-100">上海</button>
+                    <button type="button" class="btn btn-outline-primary w-100">浙江</button>
+                </div>
+
+                <div class="mb-3">
+                    <h5>下单方式</h5>
+                    <button type="button" class="btn btn-outline-primary mb-2 w-100"><a href="Shopping cart.html">加入购物车</a></button>
+                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-outline-primary w-100 btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  购买
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">提示</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        你确定要购买吗？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary"><a href="Shopping cart.html">确定</a>  </button>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  </head>
+  <body>
+  
+   
+   <footer id="footer" class="footer">
+    <div class="row footer-top">
+		  <div class="col-md-3">
+			<div class="icon">
+			 
+			</div>
+			<div class="d-flex">
+				
+			<img src="img/icon/footer1.png"  >	
+		<p class="footer-p">专业客服人员团队 提供当季优惠信息</p>
+	
+		  </div>
+		</div>
+		  <div class="col-md-3">
+			<div class="icon">
+			  
+			</div>
+			<div class="d-flex">
+			<img src="img/icon/footer2.png"><p class="footer-p">7天无理由退货15天换货(定制及特殊商品除外)</p>
+		  </div>
+		</div>
+		  <div class="col-md-3">
+			<div class="icon">
+			 
+			</div>
+			<div class="d-flex">
+			<img src="img/icon/footer3.png"><p class="footer-p">官方正品请安心购买</p>
+		  </div>
+		</div>
+		  <div class="col-md-3">
+			<div class="icon">
+			
+			</div>
+			<div class="d-flex">
+			<img src="img/icon/footer4.png"><p class="footer-p">服务热线: 400-810-5858(09:00~22:00)</p>
+		  </div>
+		</div>
+		</div>
+   <div class="row footer-bottom">
+    <div class="col-md-2">
+  
+    <ul>
+      <li ><a href="#">了解产品</a></li>
+      <li ><a href="#">手机/平板</a></li>
+      <li><a href="#">手机/耳机</a></li>
+      <li><a href="#">电视</a></li>
+      <li><a href="#">生活家电</a></li>
+      <li><a href="#">显示器/存储</a></li>
+    </ul>
+    </div>
+    <div class="col-md-2">
+    
+    <ul>
+      <li><a href="#">我的三星</a></li>
+      <li><a href="#">我的订单</a></li>
+      <li><a href="#">我的积分</a></li>
+      <li><a href="#">地址</a></li>
+      <li><a href="#">个人资料</a></li>
+      <li><a href="#">收藏夹</a></li>
+    </ul>
+    </div>
+    <div class="col-md-2">
+    
+    <ul>
+      <li><a href="#">三星商城指南</a></li>
+      <li><a href="#">常见问题</a></li>
+      <li><a href="#">三星商城账号</a></li>
+      <li><a href="#">产品注册</a></li>
+      <li><a href="#">物流服务</a></li>
+      <li><a href="#">售后服务</a></li>
+      <li><a href="#">专属服务</a></li>
+    </ul>
+    </div>
+    <div class="col-md-2">
+    
+    <ul>
+      <li><a href="#">服务支持</a></li>
+      <li><a href="#">关于商城</a></li>
+      <li><a href="#">关于三星</a></li>
+      <li><a href="#">自助服务查询</a></li>
+      <li><a href="#">联系我们</a></li>
+      <li><a href="#">三星资讯</a></li>
+      <li><a href="#">新闻报道</a></li>
+      <li><a href="#">环保声明</a></li>
+    </ul>
+    </div>
+    <div class="col-md-2">
+    <ul>
+     <li><a href="#">关注我们</a></li>
+    <img src="img/icon/4.png" alt="">
+  </ul>
+    </div>
+  </div>
+</footer>
+<script>
+function changeImage(imageSrc) {
+  document.getElementById('main-image').src = imageSrc;
+  let thumbnails = document.querySelectorAll('.thumbnail img');
+  thumbnails.forEach(img => {
+      img.classList.remove('selected');
+  });
+  event.target.classList.add('selected');
+}
+</script>
+<script src="./vendor/jquery/jquery.min.js"></script>
+<script src="./js/isotope.min.js"></script>
+<script src="./js/owl-carousel.js"></script>
+<script src="./js/custom.js"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script></script>
+  </body>
+
+</html>

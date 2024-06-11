@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>登录</title>
+    <link rel="icon" href="img/icon/icon.jfif" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/icon/favicon.png"
+    />
+
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <main class="login-bg">
+      <!-- login Area Start -->
+      <div class="login-form-area">
+        <div class="login-form">
+          <!-- Login Heading -->
+          <div class="login-heading">
+            <span>登录</span>
+            <p>输入你的账号和密码!</p>
+          </div>
+          <!-- Single Input Fields -->
+          <div class="input-box">
+            <div class="single-input-fields">
+              <label>账号或邮箱</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="请输入你的账户或邮箱"
+              />
+            </div>
+            <div class="single-input-fields">
+              <label>密码</label>
+              <input type="password" id="password" placeholder="输入密码" />
+            </div>
+            <div class="single-input-fields login-check">
+              <input type="checkbox" id="fruit1" name="keep-log" />
+              <label for="fruit1">保持登录</label>
+              <a href="#" class="f-right">忘记密码?</a>
+            </div>
+          </div>
+          <!-- form Footer -->
+          <div class="login-footer">
+            <p>没有账号? <a href="register.html">点击注册</a></p>
+            <button class="btn btn-danger" onclick="login()">登录</button>
+          </div>
+        </div>
+      </div>
+      <!-- login Area End -->
+    </main>
+
+    <script>
+      function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username === "" || password === "") {
+          alert("没有输入账号和密码");
+          return;
+        }
+
+        if (username === "123" && password === "123") {
+          alert("欢迎光临");
+          window.location.href = "index.html";
+        } else {
+          alert("账号或密码错误");
+        }
+      }
+    </script>
+  </body>
+</html>

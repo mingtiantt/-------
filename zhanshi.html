@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>展示</title>
+    <!-- AWESOME图标 -->
+    <script
+      src="https://kit.fontawesome.com/13397b7837.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 网页标签图标 -->
+    <link rel="icon" href="img/icon/icon.jfif" />
+    <!-- bootstrap引用 -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/bootstrap.bundle.js"></script>
+    <!-- style部分 -->
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      .product-card {
+        width: 150px;
+        text-align: center;
+        margin: 0 15px;
+      }
+      .product-card img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .nav-tabs .nav-link.active {
+        font-weight: bold;
+        color: red !important;
+      }
+      .product-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- nav -->
+      <div class="nav">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+          <a class="navbar-brand" href="#">
+            <img src="img/icon/icon.jfif" class="ms-4" alt="" />
+          </a>
+          <button
+            class="navbar-toggler bg-dark me-4"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="index.html">首页</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="Shopping center.html"
+                  >图书商城</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="Product details.html"
+                  >商品详情</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">关于我们</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a
+                    class="nav-link text-dark dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >用户</a
+                  >
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">登录</a></li>
+                    <li><a class="dropdown-item" href="#">注册</a></li>
+                    <li><a class="dropdown-item" href="#">关于我们</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <div class="search-box col-lg-4 col-md-3">
+              <input type="text" class="form-control" placeholder="庆余年2" />
+              <div class="btn">
+                <button class="btn">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+            <div class="buycart col-lg-2 col-md-6 ms-4">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span><a href="Shopping cart.html">我的购物车</a></span>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="gundongbox">
+      <div class="container mt-5">
+        <ul
+          class="nav nav-tabs justify-content-center"
+          id="productTab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="new-books-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#new-books"
+              type="button"
+              role="tab"
+              aria-controls="new-books"
+              aria-selected="true"
+            >
+              新书热卖
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="management-books-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#management-books"
+              type="button"
+              role="tab"
+              aria-controls="management-books"
+              aria-selected="false"
+            >
+              管理新书
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="motivation-books-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#motivation-books"
+              type="button"
+              role="tab"
+              aria-controls="motivation-books"
+              aria-selected="false"
+            >
+              成功励志新书
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="economic-books-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#economic-books"
+              type="button"
+              role="tab"
+              aria-controls="economic-books"
+              aria-selected="false"
+            >
+              经济新书
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="finance-books-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#finance-books"
+              type="button"
+              role="tab"
+              aria-controls="finance-books"
+              aria-selected="false"
+            >
+              金融投资新书
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="productTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="new-books"
+            role="tabpanel"
+            aria-labelledby="new-books-tab"
+          >
+            <div
+              id="newBooksCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="product-row">
+                    <div class="product-card card">
+                      <img
+                        src="img/card/1.jpg"
+                        class="card-img-top"
+                        alt="商品1"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">创新与企业家精神</h5>
+                        <p class="card-text">德鲁克 卓有成效的管理</p>
+                        <p class="text-danger">¥75.49</p>
+                      </div>
+                    </div>
+                    <div class="product-card card">
+                      <img
+                        src="img/card/2.jpg"
+                        class="card-img-top"
+                        alt="商品2"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">搜广推策略产品经理</h5>
+                        <p class="card-text">互联网大厂实战</p>
+                        <p class="text-danger">¥48</p>
+                      </div>
+                    </div>
+                    <div class="product-card card">
+                      <img
+                        src="img/card/12.jpg"
+                        class="card-img-top"
+                        alt="商品3"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">城投转型一本通</h5>
+                        <p class="card-text">专业指南</p>
+                        <p class="text-danger">¥62</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="product-row">
+                    <div class="product-card card">
+                      <img
+                        src="img/card/1.jpg"
+                        class="card-img-top"
+                        alt="商品1"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">创新与企业家精神</h5>
+                        <p class="card-text">德鲁克 卓有成效的管理</p>
+                        <p class="text-danger">¥75.49</p>
+                      </div>
+                    </div>
+                    <div class="product-card card">
+                      <img
+                        src="img/card/2.jpg"
+                        class="card-img-top"
+                        alt="商品2"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">搜广推策略产品经理</h5>
+                        <p class="card-text">互联网大厂实战</p>
+                        <p class="text-danger">¥48</p>
+                      </div>
+                    </div>
+                    <div class="product-card card">
+                      <img
+                        src="img/card/12.jpg"
+                        class="card-img-top"
+                        alt="商品3"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">城投转型一本通</h5>
+                        <p class="card-text">专业指南</p>
+                        <p class="text-danger">¥62</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 可以添加更多的carousel-item -->
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#newBooksCarousel"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">上一页</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#newBooksCarousel"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">下一页</span>
+              </button>
+            </div>
+          </div>
+          <!-- 其他类别的书籍可以用类似的方式添加 -->
+          <div
+            class="tab-pane fade"
+            id="management-books"
+            role="tabpanel"
+            aria-labelledby="management-books-tab"
+          >
+            管理新书内容
+          </div>
+          <div
+            class="tab-pane fade"
+            id="motivation-books"
+            role="tabpanel"
+            aria-labelledby="motivation-books-tab"
+          >
+            成功励志新书内容
+          </div>
+          <div
+            class="tab-pane fade"
+            id="economic-books"
+            role="tabpanel"
+            aria-labelledby="economic-books-tab"
+          >
+            经济新书内容
+          </div>
+          <div
+            class="tab-pane fade"
+            id="finance-books"
+            role="tabpanel"
+            aria-labelledby="finance-books-tab"
+          >
+            金融投资新书内容
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" class="footer">
+      <div class="row footer-top">
+        <div class="col-md-3">
+          <div class="d-flex">
+            <img src="img/icon/footer1.png" />
+            <p class="footer-p">专业客服人员团队 提供当季优惠信息</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex">
+            <img src="img/icon/footer2.png" />
+            <p class="footer-p">7天无理由退货15天换货(定制及特殊商品除外)</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex">
+            <img src="img/icon/footer3.png" />
+            <p class="footer-p">官方正品请安心购买</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex">
+            <img src="img/icon/footer4.png" />
+            <p class="footer-p">服务热线: 400-810-5858(09:00~22:00)</p>
+          </div>
+        </div>
+      </div>
+      <div class="row footer-bottom">
+        <div class="col-md-2">
+          <ul>
+            <li><a href="#">了解产品</a></li>
+            <li><a href="#">手机/平板</a></li>
+            <li><a href="#">手机/耳机</a></li>
+            <li><a href="#">电视</a></li>
+            <li><a href="#">生活家电</a></li>
+            <li><a href="#">显示器/存储</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul>
+            <li><a href="#">我的三星</a></li>
+            <li><a href="#">我的订单</a></li>
+            <li><a href="#">我的积分</a></li>
+            <li><a href="#">地址</a></li>
+            <li><a href="#">个人资料</a></li>
+            <li><a href="#">收藏夹</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul>
+            <li><a href="#">三星商城指南</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">三星商城账号</a></li>
+            <li><a href="#">产品注册</a></li>
+            <li><a href="#">物流服务</a></li>
+            <li><a href="#">售后服务</a></li>
+            <li><a href="#">专属服务</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul>
+            <li><a href="#">服务支持</a></li>
+            <li><a href="#">关于商城</a></li>
+            <li><a href="#">关于三星</a></li>
+            <li><a href="#">自助服务查询</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">三星资讯</a></li>
+            <li><a href="#">新闻报道</a></li>
+            <li><a href="#">环保声明</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul>
+            <li><a href="#">关注我们</a></li>
+            <img src="img/icon/4.png" alt="" />
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const pricePerItem = 32;
+
+    function updatePrice() {
+      const quantity = parseInt(document.getElementById("quantity").value);
+      const totalPrice = pricePerItem * quantity;
+      document.getElementById("item-price").innerText = `RMB ${totalPrice}`;
+      document.getElementById("item-price-1").innerText = `RMB ${totalPrice}`;
+      document.getElementById("subtotal-price").innerText = `RMB ${totalPrice}`;
+      document.getElementById("total-price").innerText = `RMB ${totalPrice}`;
+      document.getElementById(
+        "total-price-bottom"
+      ).innerText = `RMB ${totalPrice}`;
+    }
+
+    document.addEventListener("DOMContentLoaded", updatePrice, false);
+  </script>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>购物车</title>
+    <!-- AWESOME图标 -->
+    <script
+      src="https://kit.fontawesome.com/13397b7837.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- 网页标签图标 -->
+    <link rel="icon" href="img/icon/icon.jfif" />
+    <!-- bootstrap引用 -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/bootstrap.bundle.js"></script>
+    <!-- style部分 -->
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      /* 这里可以加入自定义样式 */
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- nav -->
+      <div class="nav">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+          <a class="navbar-brand" href="#">
+            <img src="img/icon/icon.jfif" class="ms-4" alt="" />
+          </a>
+          <button
+            class="navbar-toggler bg-dark me-4"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="index.html">首页</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="Shopping center.html"
+                  >图书商城</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="Product details.html"
+                  >商品详情</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">关于我们</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a
+                    class="nav-link text-dark dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >用户</a
+                  >
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">登录</a></li>
+                    <li><a class="dropdown-item" href="#">注册</a></li>
+                    <li><a class="dropdown-item" href="#">关于我们</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <div class="search-box col-lg-4 col-md-3">
+              <input type="text" class="form-control" placeholder="庆余年2" />
+              <div class="btn">
+                <button class="btn">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+            <div class="buycart col-lg-2 col-md-6 ms-4">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span><a href="Shopping cart.html">我的购物车</a></span>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="Shopping-cart" id="Shopping-cart">
+      <div class="container mt-5">
+        <h2 class="text-center fw-bold">
+          你的购物车总计 <span id="item-price">RMB 32。</span>
+        </h2>
+        <p class="text-center">所有订单均可享受免费送货和退货服务。</p>
+        <div class="row border-bottom py-3">
+          <div class="col-md-2 text-center">
+            <img src="img/card/1.jpg" alt="Product Image" class="img-fluid" />
+          </div>
+          <div class="title col-md-2">
+            <br /><br />
+            <h5 class="fw-bold">名称:呼兰河传</h5>
+            <span>作者：萧红</span>
+            <p>内容：一些...</p>
+          </div>
+          <div class="col-md-2 d-flex align-items-center">
+            <input
+              type="number"
+              id="quantity"
+              class="form-control item-quantity fw-bold"
+              value="1"
+              min="1"
+              onchange="updatePrice()"
+            />
+          </div>
+          <div
+            class="col-md-2 d-flex align-items-center justify-content-end fw-bold"
+          >
+            <span id="item-price-1">RMB 32</span>
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-end">
+            <a href="#" class="text-danger">移除</a>
+          </div>
+        </div>
+        <div class="row py-4">
+          <div class="col-md-10 text-end">
+            <p>小计</p>
+            <p>运费</p>
+          </div>
+          <div class="col-md-2 text-end">
+            <p id="subtotal-price">RMB 32</p>
+            <p>免费</p>
+          </div>
+          <div class="w-100 border-top my-3"></div>
+          <div class="col-md-10 text-end">
+            <p><i class="fa-solid fa-truck-fast"></i> 有现货，可随时发货</p>
+            <p><a href="#">了解你何时能收到商品</a></p>
+          </div>
+          <div class="col-md-2 text-end">
+            <p id="pickup-info">
+              <i class="fa-solid fa-inbox"></i> 前往附近的书店取货
+            </p>
+            <p><a href="#">查找零售店</a></p>
+          </div>
+          <div class="w-100 border-top my-3"></div>
+          <div class="col-md-10 text-end">
+            <h4 class="fw-bold">总计</h4>
+          </div>
+          <div class="col-md-2 text-end">
+            <h4 class="fw-bold" id="total-price-bottom">RMB 32</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="d-grid gap-2 col-8 mx-auto"></div>
+          <div class="d-grid gap-2 col-4 mx-auto">
+            <button type="button" class="btn btn-primary btn-lg">结账</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer">
+      <div class="row footer-top">
+        <div class="col-md-3">
+          <div class="d-flex">
+            <img src="img/icon/footer1.png" />
+            <p class="footer-p">专业客服人员团队 提供当季优惠信息</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex">
+            <img src="img/icon/footer2.png" />
+            <p class="footer-p">7天无理由退货15天换货(定制及特殊商品除外)</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex">
+            <img src="img/icon/footer3.png" />
+            <p class="footer-p">官方正品请安心购买</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="d-flex">
+            <img src="img/icon/footer4.png" />
+            <p class="footer-p">服务热线: 400-810-5858(09:00~22:00)</p>
+          </div>
+        </div>
+      </div>
+      <div class="row footer-bottom">
+        <div class="col-md-2">
+          <ul>
+            <li><a href="#">了解产品</a></li>
+            <li><a href="#">手机/平板</a></li>
+            <li><a href="#">手机/耳机</a></li>
+            <li><a href="#">电视</a></li>
+            <li><a href="#">生活家电</a></li>
+            <li><a href="#">显示器/存储</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul>
+            <li><a href="#">我的三星</a></li>
+            <li><a href="#">我的订单</a></li>
+            <li><a href="#">我的积分</a></li>
+            <li><a href="#">地址</a></li>
+            <li><a href="#">个人资料</a></li>
+            <li><a href="#">收藏夹</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul>
+            <li><a href="#">三星商城指南</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">三星商城账号</a></li>
+            <li><a href="#">产品注册</a></li>
+            <li><a href="#">物流服务</a></li>
+            <li><a href="#">售后服务</a></li>
+            <li><a href="#">专属服务</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul>
+            <li><a href="#">服务支持</a></li>
+            <li><a href="#">关于商城</a></li>
+            <li><a href="#">关于三星</a></li>
+            <li><a href="#">自助服务查询</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">三星资讯</a></li>
+            <li><a href="#">新闻报道</a></li>
+            <li><a href="#">环保声明</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <ul>
+            <li><a href="#">关注我们</a></li>
+            <img src="img/icon/4.png" alt="" />
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const pricePerItem = 32;
+
+    function updatePrice() {
+      const quantity = parseInt(document.getElementById("quantity").value);
+      const totalPrice = pricePerItem * quantity;
+      document.getElementById("item-price").innerText = `RMB ${totalPrice}`;
+      document.getElementById("item-price-1").innerText = `RMB ${totalPrice}`;
+      document.getElementById("subtotal-price").innerText = `RMB ${totalPrice}`;
+      document.getElementById("total-price").innerText = `RMB ${totalPrice}`;
+      document.getElementById(
+        "total-price-bottom"
+      ).innerText = `RMB ${totalPrice}`;
+    }
+
+    document.addEventListener("DOMContentLoaded", updatePrice, false);
+  </script>
+</html>
